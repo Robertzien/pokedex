@@ -14,7 +14,6 @@
       fetchData() {
         this.error = this.post = null
         this.loading = true
-        // replace `getPost` with your data fetching util / API wrapper
         fetch('https://pokeapi.co/api/v2/pokemon?limit=151').then(res => res.json()).then(data => {
           this.loading = false;
           this.pokemon = data.results;
@@ -36,8 +35,15 @@
 <style>
 .pokemon-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+  text-align: center;
+}
+
+.pokemoncard {
+border: solid 1px black;
+height: 60px;
+line-height: 60px;
 }
 </style>
 
