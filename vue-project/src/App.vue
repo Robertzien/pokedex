@@ -27,7 +27,7 @@
   <div v-if="loading">LOADING</div>
   <div class="pokemon-grid">
     <div class="pokemoncard" v-for="pokemon in pokemon" :key="pokemon.name">
-      {{pokemon.name}}
+      {{ pokemon.name }}
     </div>
   </div>
 </template>
@@ -41,9 +41,12 @@
 }
 
 .pokemoncard {
-border: solid 1px black;
-height: 60px;
-line-height: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 15px;
+  background-color: #DC143C;
+  color: white;
+  border: none;
+  font-weight: 700;
 }
 </style>
-
